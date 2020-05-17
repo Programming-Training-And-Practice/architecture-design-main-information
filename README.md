@@ -15,6 +15,7 @@
 * [Implementations of Service Discovery.](#implementations-of-service-discovery)
 * [Cycle Breaker.](#cycle-breaker)
 * [Implementations of Cycle Breaker.](#implementations-of-cycle-breaker)
+* [Implementations of Config Server.](#implementations-of-config-server)
 * [Issues with microservices.](#issues-with-microservices)
 * [Situations that can provoke problems on the Server.](#situations-that-can-provoke-problems-on-the-server)
 * [Patterns.](#patterns)
@@ -51,6 +52,7 @@
 * Fault Tolerance and Resilience.
 * Cycle Breaker Pattern.
 * Fallback.
+* Config Server.
 * Authentication and Authorization. 
 
 
@@ -95,9 +97,28 @@
 
 
 
+
+## Implementations of Config Server.
+* Apache Zookeeper.
+* ETCD - distributed key-value storage.
+* Hashicorp Consul.
+* Spring Cloud Config Server.
+
+
+
+
+
 ## Issues with microservices.
 1. A microservice instance is slow. Partly Solution: Timeout.
 2. A microservice instance goes down. Solution: Run multiple instances.
+
+
+
+
+
+## Possible microservices error.
+* Config Server will crashes.
+* 
 
 
 
@@ -126,6 +147,8 @@
 >> * Failing fast.
 >> * Fallback functionality.
 >> * Automatic recovery.
+
+> * Bulkhead Pattern.
 
 
 
