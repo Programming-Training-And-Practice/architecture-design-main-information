@@ -7,6 +7,8 @@
 ## Contents at a Glance.
 * [About](#about)
 * [Documentation.](#documentation)
+* [What are Microservices?](#what-are-microservices)
+* [With a Microservice Architecture.](#with-a-microservice-architecture)
 * [Pros.](#pros)
 * [Cons.](#cons)
 * [Best Practices to Design Microservices.](#best-practices-to-design-microservices)
@@ -39,6 +41,43 @@
 
 
 
+## What are Microservices?
+* Microservices small targeted services.
+* Each service has its own repository.
+* Microservices are isolated from other services.
+  * Should not be bundled with other services when deployed.
+* Microservices are loosely coupled.
+  * When interacting with other services, should be done in a technology agnostic manner.
+  * ie - Restful web services - HTTP/JSON.
+
+
+
+
+
+## With a Microservice Architecture.
+* Applications are composed using individual microservices
+* Each service will typically have its own database
+* Each microservice is independently deployable
+* Scaling of individual services is now possible
+* CI/CD becomes easier since services are smaller and less complex to deploy
+
+
+
+
+
+## How ‘Big’ Should a Microservice Be?
+* A microservice can be as small as a single API endpoint
+  * ie - ‘Get Orders’
+* A microservice can be several or even dozens of API endpoints
+* Answer is a topic of much debate
+* Guideline - Amazon’s Two Pizza Team - A microservice should be able to be 
+  supported be a team you can fed with two pizzas. (~12 people)
+* Scalability - This can also be a consideration in the size of a microservice
+  * The higher the scalability, the more specialized the service should be
+  
+  
+  
+  
 ## Pros.
 * Polyglot Architecture.
 * Freedom to use different technologies, tools, languages.
@@ -56,6 +95,11 @@
 * Independent Deployment.
 * Fault Isolation.
 * Granular Scaling. Individual components can scale as per need, there is no need to scale all components together.
+* Easy to understand & develop - Services are smaller and more targeted
+* Software Quality - Since services are more targeted and have a limited scope
+* Scalability - Independent services can be scaled up and down to the application’s demands.
+* Reliability - Software bugs are isolated
+* Technology flexibility - Services can be developed using any language or technology stack.
 
 
 
@@ -73,6 +117,11 @@
 * Difficult to maintain transaction safety.
 * Tough to track data across various boundaries.
 * Difficult to code between services.
+* Integration testing can be difficult
+* Deployments are more complex. Rather than one application to deploy, you now have many.
+* Operational cost with each service - Each service is a small application
+* Needs own repo, own deployment process, own database, etc
+* Additional hardware resources - Additional services need additional hardware to run on
 
 
 
