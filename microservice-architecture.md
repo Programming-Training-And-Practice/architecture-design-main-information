@@ -9,6 +9,16 @@
 * [Documentation.](#documentation)
 * [What are Microservices?](#what-are-microservices)
 * [With a Microservice Architecture.](#with-a-microservice-architecture)
+* [How ‘Big’ Should a Microservice Be?](#how-big-should-a-microservice-be)
+* [Common Microservice Deployment Tools.](#common-microservice-deployment-tools)
+* [Adopting Microservices](#adopting-microservices)
+* [Decomposing to Services.](#decomposing-to-services)
+* [Single Responsibility Principle.](#single-responsibility-principle)
+* [Microservices and Development Teams.](#microservices-and-development-teams)
+* []()
+* []()
+* []()
+* []()
 * [Pros.](#pros)
 * [Cons.](#cons)
 * [Best Practices to Design Microservices.](#best-practices-to-design-microservices)
@@ -74,10 +84,75 @@
   supported be a team you can fed with two pizzas. (~12 people)
 * Scalability - This can also be a consideration in the size of a microservice
   * The higher the scalability, the more specialized the service should be
+
   
   
   
   
+## Common Microservice Deployment Tools:
+* This is very large and diverse area!
+* AWS Beanstalk
+* AWS ECS/EKS
+* Kubernetes
+* Docker Swarm
+* Red Hat OpenShift
+* Cloud Foundry
+
+
+
+
+
+## Adopting Microservices:
+* Often applications will start as monoliths.
+  * Might be because of being older legacy applications.
+  * Or a development choice.
+    * Remember there is a ‘cost’ to splitting into microservices.
+  * Its not uncommon to start development of an application as a monolith.
+* Monolithic architectures are well established in companies.
+* Many companies are just starting to adopt Microservices.
+
+
+
+
+
+## Decomposing to Services:
+* Decomposing is the process of taking a larger monolithic application and breaking it up into microservices.
+* Decomposition is more of an ‘art’ than a science
+* Strategies you can use:
+  * By Business Capability - ie Order Service
+  * By Domain Objects - ie Product Service (services over domain object ‘Product’)
+  * By action verbs - Payment Service
+  * By Nouns - Customer Service
+  
+  
+  
+  
+  
+## Single Responsibility Principle:
+* Single Responsibility Principle (SRP) is a term coined by Uncle Bob Martin about object oriented programming.
+  * SRP says a class should have just one reason to change.
+  * Meaning your classes should be very specific in what they do.
+  * Do one thing, and do it very well.
+* SRP can also be applied to microservices.
+  * Do one thing, and do it very well.
+
+
+
+
+
+## Microservices and Development Teams:
+* Larger organizations might have hundreds of developers.
+* When possible small teams should be responsible for specific microservices.
+* This will often lend itself to business functions.
+  * An account team would work on accounting related services.
+  * An Customer Order team would work on Customer Order related services.
+  * An Order Fulfillment team would work on Order Fulfillment related services.
+* Often you will see a lot of overlap of business domain with the domain of the services.
+
+
+
+
+
 ## Pros.
 * Polyglot Architecture.
 * Freedom to use different technologies, tools, languages.
