@@ -7,6 +7,7 @@
 ## Contents at a Glance.
 * [About](#about)
 * [Documentation.](#documentation)
+* [Gateway.](#gateway)
 * [Tools.](#tools)
 * [Why do we need "API Gateway".](#why-do-we-need-api-gateway)
 * [Tools.](#tools)
@@ -23,6 +24,19 @@
 
 
 ## Documentation.
+
+
+
+
+
+## Gateway:
+* Endpoint that is exposed to other services.
+  * Can be internet for public APIs.
+  * More likely to be internal.
+* Abstracts implementation of services.
+* Client calls URL, is unaware of routing taking place to running instance.
+* Acts as roughly a proxy for network traffic.
+* Can also act as a load balancer.
 
 
 

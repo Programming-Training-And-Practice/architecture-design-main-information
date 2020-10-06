@@ -7,6 +7,7 @@
 ## Contents at a Glance.
 * [About](#about)
 * [Documentation.](#documentation)
+* [Useful URL.](#useful-urls)
 * [What are Microservices?](#what-are-microservices)
 * [With a Microservice Architecture.](#with-a-microservice-architecture)
 * [How ‘Big’ Should a Microservice Be?](#how-big-should-a-microservice-be)
@@ -15,24 +16,25 @@
 * [Decomposing to Services.](#decomposing-to-services)
 * [Single Responsibility Principle.](#single-responsibility-principle)
 * [Microservices and Development Teams.](#microservices-and-development-teams)
-* []()
-* []()
-* []()
-* []()
 * [Pros.](#pros)
 * [Cons.](#cons)
 * [Best Practices to Design Microservices.](#best-practices-to-design-microservices)
 * [Microservice Architecture most important parts.](#microservice-architecture-most-important-parts)
 * [Microservice most important parts.](#microservice-most-important-parts)
-* [API Gateway.]()
-* [Distributed Transaction Management.]()
+* [API Gateway.](addition/api-gateway.md)
+* [Distributed Transaction Management.](addition/distributed-transaction-management.md)
 * [Versioning.](#versioning)
 * [Microservice Challenges.](#microservice-challenges)
 * [Characteristics of Microservices.](#characteristics-of-microservices)
+* [Service Instances.](#service-instances)
+* [Database Tier.](#database-tier)
+* [Messaging.](#messaging)
+* [Downstream Services.](#downstream-services)
+* []()
+* []()
 * [Issues with microservices.](#issues-with-microservices)
 * [Idempotency.](#idempotency)
 * [Transaction Compensation.](#transaction-compensation)
-* [Useful URL.](#useful-urls)
 * [Help](#help)
 
 
@@ -46,6 +48,16 @@
 
 
 ## Documentation.
+
+
+
+
+
+## Useful URLs.
+* [Microservice IO.](https://microservices.io/)
+* [Richardson Maturity Model.](https://www.google.com/search?q=richardson+maturity+model&oq=Richardson+ma&aqs=chrome.1.69i57j0l4j46l3.7412j0j7&sourceid=chrome&ie=UTF-8)
+* [The Twelve-Factor App.](https://12factor.net/)
+* [Database per Service.](https://microservices.io/patterns/data/database-per-service.html)
 
 
 
@@ -288,6 +300,57 @@
 
 
 
+## Service Instances:
+* Expect to be running N number of services.
+* Exact number depends on reliability and load requirements.
+* Minimum might be 3, for high availability.
+* Some tools allow you to dynamically scale based on load or anticipated load:
+  * Think Netflix at night.
+  * In evenings, Netflix traffic is 1/3 of US internet traffic.
+  * Netflix will scale up and down with load.
+  
+  
+  
+  
+  
+## Database Tier:
+* Typically one database per microservice:
+  * Guideline - not a hard ‘rule’.
+* Highly scalable services will often have one transactional database:
+  * And one or more read database (replicas).
+* Organizations will often have more than one database technology.
+* Not uncommon to see mix of SQL and NoSQL database technologies.
+
+
+
+
+
+## Messaging:
+* A common pattern is to expose an API endpoint via a RESTFul API:
+  * Dependent microservices are often message based.
+  * Messages follow an event or command pattern.
+* Messaging allows for decoupling and scalability.
+* Messaging can be used to define a work flow:
+  * New Order, Validate Order, Charge Credit Card, Allocate Inventory, Ship Order.
+
+
+
+
+
+## Downstream Services:
+* Often an action on a microservice will invoke actions on multiple down stream services.
+* For example, it is rumoured a search on Amazon will invoke over 100 services to return the search results - search, 
+  sponsors, your history, logging your search, etc.
+* Placing a new order might invoke the following:
+  * Validate Order.
+  * Pay Credit Card.
+  * Allocate Inventory.
+  * Ship Order.
+
+
+
+
+
 ## Issues with microservices.
 1. A microservice instance is slow. Partly Solution: Timeout.
 2. A microservice instance goes down. Solution: Run multiple instances.
@@ -304,13 +367,6 @@
 
 
 ## Transaction Compensation.
-
-
-
-
-
-## Useful URLs.
-[Richardson Maturity Model.](https://www.google.com/search?q=richardson+maturity+model&oq=Richardson+ma&aqs=chrome.1.69i57j0l4j46l3.7412j0j7&sourceid=chrome&ie=UTF-8)
 
 
 
