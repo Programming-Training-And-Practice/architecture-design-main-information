@@ -11,6 +11,7 @@
 * [REST.](https://github.com/descriptions-of-it-technologies/rest-api)
 * [RESTful.](https://github.com/descriptions-of-it-technologies/restful-api)
 * [HTTP.](https://github.com/descriptions-of-it-technologies/http)
+* [Richardson Maturity Model (RMM).](https://github.com/descriptions-of-it-technologies/richardson-maturity-model-rmm)
 * [What are Microservices?](#what-are-microservices)
 * [With a Microservice Architecture.](#with-a-microservice-architecture)
 * [How ‘Big’ Should a Microservice Be?](#how-big-should-a-microservice-be)
@@ -56,7 +57,6 @@
 
 ## Useful URLs.
 * [Microservice IO.](https://microservices.io/)
-* [Richardson Maturity Model.](https://www.google.com/search?q=richardson+maturity+model&oq=Richardson+ma&aqs=chrome.1.69i57j0l4j46l3.7412j0j7&sourceid=chrome&ie=UTF-8)
 * [The Twelve-Factor App.](https://12factor.net/)
 * [Database per Service.](https://microservices.io/patterns/data/database-per-service.html)
 
