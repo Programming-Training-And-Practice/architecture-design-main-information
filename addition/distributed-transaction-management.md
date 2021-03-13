@@ -31,13 +31,6 @@
 
 
 
-## SAGAS
-* [SAGAS Hector Garcaa-Molrna Kenneth Salem ](https://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf)
-
-
-
-
-
 ## Reconciliation.
 
 
