@@ -59,6 +59,9 @@
 * [Microservice IO.](https://microservices.io/)
 * [The Twelve-Factor App.](https://12factor.net/)
 * [Database per Service.](https://microservices.io/patterns/data/database-per-service.html)
+* [Martin Fowler Microservices.](https://martinfowler.com/articles/microservices.html)
+* [Microservice Architecture — Communication & Design Patterns.](https://blog.devgenius.io/microservice-architecture-communication-design-patterns-70b37beec294)
+* []()
 
 
 
